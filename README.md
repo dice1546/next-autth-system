@@ -16,14 +16,29 @@ Before running the app, make sure to add the following environment variables:
 
 ## Installation
 
-Once you have added the above environment variables, you can run the following commands to install dependencies and start the development server:
+Follow these steps to set up and run the app:
 
-```bash
-npm install
-npm run dev
+1. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-npx prisma generate
-npx prisma db push
+2. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-npx prisma studio
-```
+3. **Generate Prisma client:**
+    ```bash
+    npx prisma generate
+    ```
+
+4. **Push the database schema to your database:**
+    ```bash
+    npx prisma db push
+    ```
+
+5. **Open Prisma Studio:**
+    ```bash
+    npx prisma studio
+    ```

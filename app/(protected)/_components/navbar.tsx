@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="bg-secondary flex 
+      className="bg-slate-700 flex 
     justify-between items-center p-4 rounded-xl 
     w-[600px] shadow-sm"
     >

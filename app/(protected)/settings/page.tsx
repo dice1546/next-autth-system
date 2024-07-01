@@ -28,7 +28,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { FontRomanIcon } from "@radix-ui/react-icons";
 import { UserRole } from "@prisma/client";
 import { Switch } from "@/components/ui/switch";
 
@@ -67,9 +66,11 @@ const SettingsPage = () => {
   };
 
   return (
-    <Card className="w-[600px]">
+    <Card className="w-[600px] bg-slate-900 border-[1px] border-slate-700">
       <CardHeader>
-        <p className="text-2xl font-semibold text-center">Settings</p>
+        <p className="text-2xl font-semibold text-center text-slate-200">
+          Settings
+        </p>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -80,12 +81,13 @@ const SettingsPage = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel className="text-slate-200">Name</FormLabel>
                     <FormControl>
                       <Input
                         {...field}
                         placeholder="Daniel"
                         disabled={isPending}
+                        className="text-slate-300"
                       />
                     </FormControl>
                     <FormMessage />
@@ -99,13 +101,14 @@ const SettingsPage = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-slate-200">Email</FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="daniel@exmple.com"
                             disabled={isPending}
                             type="email"
+                            className="text-slate-300"
                           />
                         </FormControl>
                         <FormMessage />
@@ -117,13 +120,16 @@ const SettingsPage = () => {
                     name="password"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Password</FormLabel>
+                        <FormLabel className="text-slate-200">
+                          Password
+                        </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="******"
                             disabled={isPending}
                             type="password"
+                            className="text-slate-200"
                           />
                         </FormControl>
                         <FormMessage />
@@ -135,13 +141,16 @@ const SettingsPage = () => {
                     name="newPassword"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>New Password</FormLabel>
+                        <FormLabel className="text-slate-200">
+                          New Password
+                        </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             placeholder="******"
                             disabled={isPending}
                             type="password"
+                            className="text-slate-200"
                           />
                         </FormControl>
                         <FormMessage />
@@ -154,8 +163,8 @@ const SettingsPage = () => {
                 control={form.control}
                 name="role"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Role</FormLabel>
+                  <FormItem className="border=[1px] border-slate-600">
+                    <FormLabel className="text-slate-200">Role</FormLabel>
                     <Select
                       disabled={isPending}
                       onValueChange={field.onChange}
@@ -163,7 +172,10 @@ const SettingsPage = () => {
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a role" />
+                          <SelectValue
+                            placeholder="Select a role"
+                            className="text-slate-300"
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -180,7 +192,7 @@ const SettingsPage = () => {
                   control={form.control}
                   name="isTwoFactorEnabled"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
+                    <FormItem className="flex flex-row text-slate-200 items-center justify-between rounded-lg border p-3 shadow-sm">
                       <div className="space-y-0.5">
                         <FormLabel>Tow Factor Authentication</FormLabel>
                         <FormDescription>
@@ -192,6 +204,7 @@ const SettingsPage = () => {
                           disabled={isPending}
                           checked={field.value}
                           onCheckedChange={field.onChange}
+                          className="bg-slate-400"
                         />
                       </FormControl>
                     </FormItem>

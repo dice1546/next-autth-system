@@ -30,9 +30,9 @@ const AdminPage = () => {
     }
   
   return (
-    <Card className="w-[600px]">
+    <Card className="w-[600px] bg-slate-900 border-[1px] border-slate-700">
         <CardHeader>
-            <p className="text-2xl font-semibold text-center">
+            <p className="text-2xl font-semibold text-center text-slate-200">
                 🗝️ Admin
             </p>
         </CardHeader>
@@ -42,20 +42,20 @@ const AdminPage = () => {
                 message="You are allowed to see this content"/>
             </RoleGate>
             <div className="flex flex-row items-center justify-between 
-            rounded-lg border p-3 shadow-md">
-                <p className="text-sm font-medium">
+            rounded-lg border-[1px] border-slate-600 p-3 shadow-md">
+                <p className="text-sm font-medium text-slate-200">
                     Admin-only API Route
                 </p>
-                <Button onClick={onApiRouteClick}>
+                <Button variant="default" onClick={onApiRouteClick}>
                     Click to test
                 </Button>
             </div>
             <div className="flex flex-row items-center justify-between 
-            rounded-lg border p-3 shadow-md">
-                <p className="text-sm font-medium">
+            rounded-lg border-[1px] border-slate-600 p-3 shadow-md">
+                <p className="text-sm font-medium text-slate-200">
                     Admin-only Server Action
                 </p>
-                <Button onClick={onServerActionClicked}>
+                <Button variant="default" onClick={onServerActionClicked}>
                     Click to test
                 </Button>
             </div>
